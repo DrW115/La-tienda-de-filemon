@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteInterfaz));
             this.tbOperadorUI = new System.Windows.Forms.TabControl();
             this.tbpProductos = new System.Windows.Forms.TabPage();
             this.btnComprar = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             // 
             // tbpProductos
             // 
+            this.tbpProductos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbpProductos.BackgroundImage")));
             this.tbpProductos.Controls.Add(this.btnComprar);
             this.tbpProductos.Controls.Add(this.btnAgregarCarrito);
             this.tbpProductos.Controls.Add(this.gpbProductos);
@@ -70,21 +72,24 @@
             this.tbpProductos.TabIndex = 0;
             this.tbpProductos.Text = "Tienda";
             this.tbpProductos.UseVisualStyleBackColor = true;
+            this.tbpProductos.Click += new System.EventHandler(this.tbpProductos_Click);
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(576, 244);
+            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.Location = new System.Drawing.Point(501, 217);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(147, 23);
+            this.btnComprar.Size = new System.Drawing.Size(147, 43);
             this.btnComprar.TabIndex = 3;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
             // 
             // btnAgregarCarrito
             // 
-            this.btnAgregarCarrito.Location = new System.Drawing.Point(576, 134);
+            this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrito.Location = new System.Drawing.Point(501, 140);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
-            this.btnAgregarCarrito.Size = new System.Drawing.Size(147, 23);
+            this.btnAgregarCarrito.Size = new System.Drawing.Size(147, 44);
             this.btnAgregarCarrito.TabIndex = 2;
             this.btnAgregarCarrito.Text = "Agregar al carrito";
             this.btnAgregarCarrito.UseVisualStyleBackColor = true;
@@ -113,6 +118,7 @@
             // 
             // tbpCarrito
             // 
+            this.tbpCarrito.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbpCarrito.BackgroundImage")));
             this.tbpCarrito.Controls.Add(this.btnEliminarProducto);
             this.tbpCarrito.Controls.Add(this.btnConfirmarCompra);
             this.tbpCarrito.Controls.Add(this.gpbCarrito);
@@ -126,18 +132,20 @@
             // 
             // btnEliminarProducto
             // 
-            this.btnEliminarProducto.Location = new System.Drawing.Point(496, 218);
+            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarProducto.Location = new System.Drawing.Point(342, 235);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(121, 23);
+            this.btnEliminarProducto.Size = new System.Drawing.Size(157, 60);
             this.btnEliminarProducto.TabIndex = 3;
             this.btnEliminarProducto.Text = "Eliminar";
             this.btnEliminarProducto.UseVisualStyleBackColor = true;
             // 
             // btnConfirmarCompra
             // 
-            this.btnConfirmarCompra.Location = new System.Drawing.Point(496, 142);
+            this.btnConfirmarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarCompra.Location = new System.Drawing.Point(342, 95);
             this.btnConfirmarCompra.Name = "btnConfirmarCompra";
-            this.btnConfirmarCompra.Size = new System.Drawing.Size(121, 23);
+            this.btnConfirmarCompra.Size = new System.Drawing.Size(157, 63);
             this.btnConfirmarCompra.TabIndex = 2;
             this.btnConfirmarCompra.Text = "Confirmar compra";
             this.btnConfirmarCompra.UseVisualStyleBackColor = true;
@@ -146,9 +154,10 @@
             // gpbCarrito
             // 
             this.gpbCarrito.Controls.Add(this.dgvCarrito);
+            this.gpbCarrito.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gpbCarrito.Location = new System.Drawing.Point(3, 6);
             this.gpbCarrito.Name = "gpbCarrito";
-            this.gpbCarrito.Size = new System.Drawing.Size(292, 407);
+            this.gpbCarrito.Size = new System.Drawing.Size(293, 407);
             this.gpbCarrito.TabIndex = 1;
             this.gpbCarrito.TabStop = false;
             this.gpbCarrito.Text = "Carrito";
