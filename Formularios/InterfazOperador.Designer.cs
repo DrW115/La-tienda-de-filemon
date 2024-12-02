@@ -74,11 +74,11 @@
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.gpbProductosComprados = new System.Windows.Forms.GroupBox();
             this.chartProductosComprados = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
             this.tbOperadorUI.SuspendLayout();
             this.tbpProductos.SuspendLayout();
             this.gpbProductos.SuspendLayout();
@@ -144,6 +144,7 @@
             this.btnEliminarProducto.TabIndex = 12;
             this.btnEliminarProducto.Text = "Eliminar";
             this.btnEliminarProducto.UseVisualStyleBackColor = true;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // btnActualizarProducto
             // 
@@ -508,6 +509,32 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtCorreoCliente
+            // 
+            this.txtCorreoCliente.Location = new System.Drawing.Point(568, 166);
+            this.txtCorreoCliente.Name = "txtCorreoCliente";
+            this.txtCorreoCliente.Size = new System.Drawing.Size(100, 22);
+            this.txtCorreoCliente.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(428, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Correo del cliente";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(578, 227);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // gpbProductosComprados
             // 
             this.gpbProductosComprados.Controls.Add(this.chartProductosComprados);
@@ -533,32 +560,6 @@
             this.chartProductosComprados.Size = new System.Drawing.Size(259, 221);
             this.chartProductosComprados.TabIndex = 0;
             this.chartProductosComprados.Text = "chart1";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(578, 227);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(428, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Correo del cliente";
-            // 
-            // txtCorreoCliente
-            // 
-            this.txtCorreoCliente.Location = new System.Drawing.Point(568, 166);
-            this.txtCorreoCliente.Name = "txtCorreoCliente";
-            this.txtCorreoCliente.Size = new System.Drawing.Size(100, 22);
-            this.txtCorreoCliente.TabIndex = 3;
             // 
             // InterfazOperador
             // 

@@ -444,5 +444,22 @@ namespace ProyectoFinal2.Formularios
             chartProductosComprados.ChartAreas[0].AxisY.Title = "Cantidad Comprada";
             chartProductosComprados.ChartAreas[0].RecalculateAxesScale();
         }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvProductos.SelectedRows[0];
+                Producto productoCarritoSeleccionado = (Producto)filaSeleccionada.DataBoundItem;
+                Producto productoSeleccionado = productos.FirstOrDefault(p => p.Nombre == productoCarritoSeleccionado.Nombre);
+
+                if (productoSeleccionado != null)
+                {
+                    productos.Remove(productoSeleccionado);
+                    ActualizarGridProductos();
+                    gd.GuardarProducto(productos);
+                }
+            }
+        }
     }
 }
