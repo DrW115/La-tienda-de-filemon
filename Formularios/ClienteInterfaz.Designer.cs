@@ -36,11 +36,11 @@
             this.gpbProductos = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.tbpCarrito = new System.Windows.Forms.TabPage();
+            this.chkReporte = new System.Windows.Forms.CheckBox();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.btnConfirmarCompra = new System.Windows.Forms.Button();
             this.gpbCarrito = new System.Windows.Forms.GroupBox();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
-            this.chkReporte = new System.Windows.Forms.CheckBox();
             this.tbOperadorUI.SuspendLayout();
             this.tbpProductos.SuspendLayout();
             this.gpbProductos.SuspendLayout();
@@ -73,7 +73,6 @@
             this.tbpProductos.TabIndex = 0;
             this.tbpProductos.Text = "Tienda";
             this.tbpProductos.UseVisualStyleBackColor = true;
-            this.tbpProductos.Click += new System.EventHandler(this.tbpProductos_Click);
             // 
             // btnComprar
             // 
@@ -132,6 +131,16 @@
             this.tbpCarrito.Text = "Carrito";
             this.tbpCarrito.UseVisualStyleBackColor = true;
             // 
+            // chkReporte
+            // 
+            this.chkReporte.AutoSize = true;
+            this.chkReporte.Location = new System.Drawing.Point(351, 339);
+            this.chkReporte.Name = "chkReporte";
+            this.chkReporte.Size = new System.Drawing.Size(130, 20);
+            this.chkReporte.TabIndex = 4;
+            this.chkReporte.Text = "Generar Reporte";
+            this.chkReporte.UseVisualStyleBackColor = true;
+            // 
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,6 +150,7 @@
             this.btnEliminarProducto.TabIndex = 3;
             this.btnEliminarProducto.Text = "Eliminar";
             this.btnEliminarProducto.UseVisualStyleBackColor = true;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // btnConfirmarCompra
             // 
@@ -173,16 +183,6 @@
             this.dgvCarrito.RowTemplate.Height = 24;
             this.dgvCarrito.Size = new System.Drawing.Size(280, 380);
             this.dgvCarrito.TabIndex = 0;
-            // 
-            // chkReporte
-            // 
-            this.chkReporte.AutoSize = true;
-            this.chkReporte.Location = new System.Drawing.Point(351, 339);
-            this.chkReporte.Name = "chkReporte";
-            this.chkReporte.Size = new System.Drawing.Size(130, 20);
-            this.chkReporte.TabIndex = 4;
-            this.chkReporte.Text = "Generar Reporte";
-            this.chkReporte.UseVisualStyleBackColor = true;
             // 
             // ClienteInterfaz
             // 

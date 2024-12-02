@@ -121,7 +121,7 @@
   <data name="tbpProductos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABPgAAALICAYAAADi7U4NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAA/7JJREFUeF7s/c2qJLmyLYwWJCSHr3OfISEhoRr3IQoSEoqzeqtZnY/FgoKEhN24
+        cQAAEnEB89x6jgAA/7JJREFUeF7s/c2qJLmyLYwWJCSHr3OfISEhoRr3IQoSEoqzeqtZnY/FgoKEhN24
         j3AbCxISCqrxNXczGwWZJBTsxygoKNgvsbmNPdlwIK7px+SmoR+TXPIIj5hqaI45fMhMJoWHu2Sh8Pju
         u1d/v3z3gso18bUvrTrzRypvqbyBY7KgPosvXHha/HfCnybqi+/i7+h/U1r1DH9F5cU74u/a6mc52hc5
         4rV1z4vxa/YLnxu++vmny4sf2+t/R/W/k/WR99Y/Lf/sCnPAVz9/pnH7HMYP+XfEvyPeWn/jiL16r38N
@@ -3830,7 +3830,7 @@
   <data name="tbpCarrito.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABPgAAALICAYAAADi7U4NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAA/7JJREFUeF7s/c2qJLmyLYwWJCSHr3OfISEhoRr3IQoSEoqzeqtZnY/FgoKEhN24
+        cQAAEnEB89x6jgAA/7JJREFUeF7s/c2qJLmyLYwWJCSHr3OfISEhoRr3IQoSEoqzeqtZnY/FgoKEhN24
         j3AbCxISCqrxNXczGwWZJBTsxygoKNgvsbmNPdlwIK7px+SmoR+TXPIIj5hqaI45fMhMJoWHu2Sh8Pju
         u1d/v3z3gso18bUvrTrzRypvqbyBY7KgPosvXHha/HfCnybqi+/i7+h/U1r1DH9F5cU74u/a6mc52hc5
         4rV1z4vxa/YLnxu++vmny4sf2+t/R/W/k/WR99Y/Lf/sCnPAVz9/pnH7HMYP+XfEvyPeWn/jiL16r38N

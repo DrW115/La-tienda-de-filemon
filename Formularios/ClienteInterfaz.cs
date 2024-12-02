@@ -209,9 +209,20 @@ namespace ProyectoFinal2.Formularios
             return clientes.FirstOrDefault(x => x.correo == correo);
         }
 
-        private void tbpProductos_Click(object sender, EventArgs e)
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
         {
+            if (dgvCarrito.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvCarrito.SelectedRows[0];
+                ProductoCarrito productoCarritoSeleccionado = (ProductoCarrito)filaSeleccionada.DataBoundItem;
+                ProductoCarrito productoSeleccionado = carrito.FirstOrDefault(p => p.Nombre == productoCarritoSeleccionado.Nombre);
 
+                if (productoSeleccionado != null)
+                {
+                    carrito.Remove(productoSeleccionado);
+                    ActualizarGridCarrito();
+                }
+            }
         }
     }
 }
