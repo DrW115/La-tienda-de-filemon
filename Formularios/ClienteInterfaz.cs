@@ -175,5 +175,10 @@ namespace ProyectoFinal2.Formularios
         {
             return clientes.FirstOrDefault(x => x.correo == correo);
         }
+
+        private void tbpProductos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearCuentaCliente));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,44 +80,48 @@
             // 
             this.txtNombreUsuario.Location = new System.Drawing.Point(344, 123);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(100, 22);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(128, 22);
             this.txtNombreUsuario.TabIndex = 4;
             // 
             // txtPasswordConfirmacion
             // 
             this.txtPasswordConfirmacion.Location = new System.Drawing.Point(344, 249);
             this.txtPasswordConfirmacion.Name = "txtPasswordConfirmacion";
-            this.txtPasswordConfirmacion.Size = new System.Drawing.Size(100, 22);
+            this.txtPasswordConfirmacion.Size = new System.Drawing.Size(128, 22);
             this.txtPasswordConfirmacion.TabIndex = 5;
             // 
             // txtPasswordUsuario
             // 
             this.txtPasswordUsuario.Location = new System.Drawing.Point(344, 203);
             this.txtPasswordUsuario.Name = "txtPasswordUsuario";
-            this.txtPasswordUsuario.Size = new System.Drawing.Size(100, 22);
+            this.txtPasswordUsuario.Size = new System.Drawing.Size(128, 22);
             this.txtPasswordUsuario.TabIndex = 6;
             // 
             // txtCorreoUsuario
             // 
             this.txtCorreoUsuario.Location = new System.Drawing.Point(344, 160);
             this.txtCorreoUsuario.Name = "txtCorreoUsuario";
-            this.txtCorreoUsuario.Size = new System.Drawing.Size(100, 22);
+            this.txtCorreoUsuario.Size = new System.Drawing.Size(128, 22);
             this.txtCorreoUsuario.TabIndex = 7;
             // 
             // btnCrearCuenta
             // 
-            this.btnCrearCuenta.Location = new System.Drawing.Point(276, 317);
+            this.btnCrearCuenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCuenta.Location = new System.Drawing.Point(254, 307);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(95, 23);
+            this.btnCrearCuenta.Size = new System.Drawing.Size(130, 23);
             this.btnCrearCuenta.TabIndex = 8;
             this.btnCrearCuenta.Text = "Crear cuenta";
-            this.btnCrearCuenta.UseVisualStyleBackColor = true;
+            this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
             // CrearCuentaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.txtCorreoUsuario);
