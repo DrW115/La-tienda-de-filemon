@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Collections;
 
 
 namespace ProyectoFinal2.Formularios
@@ -62,30 +63,68 @@ namespace ProyectoFinal2.Formularios
 
                 if (productoSeleccionado != null)
                 {
-                    ProductoCarrito productoCarrito = new ProductoCarrito
-                    {
-                        Nombre = productoSeleccionado.Nombre,
-                        Precio = productoSeleccionado.Precio
-                    };
+                    int cantidadADesear = 1; 
+                    var productoEnCarrito = carrito.FirstOrDefault(p => p.Nombre == productoSeleccionado.Nombre);
 
-                    carrito.Add(productoCarrito);
+                    if (productoEnCarrito != null)
+                    {
+                        if (productoSeleccionado.Stock >= productoEnCarrito.Cantidad + cantidadADesear)
+                        {
+                            productoEnCarrito.Cantidad += cantidadADesear;
+                        }
+                        else
+                        {
+                            MessageBox.Show($"No hay suficiente stock disponible para agregar más de {productoSeleccionado.Stock} unidades.");
+                        }
+                    }
+                    else
+                    {
+                        if (productoSeleccionado.Stock >= cantidadADesear)
+                        {
+                            ProductoCarrito nuevoProductoCarrito = new ProductoCarrito
+                            {
+                                Nombre = productoSeleccionado.Nombre,
+                                Precio = productoSeleccionado.Precio,
+                                Cantidad = cantidadADesear
+                            };
+                            carrito.Add(nuevoProductoCarrito);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No hay suficiente stock para este producto.");
+                        }
+                    }
 
                     ActualizarGridCarrito();
                 }
             }
         }
 
+
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            List<Producto> productosComprados = new List<Producto>();
             if (clienteLogueado != null)
             {
+                List<Producto> productosComprados = new List<Producto>();
                 foreach (var productoCarrito in carrito)
                 {
                     Producto productoCompra = productos.FirstOrDefault(p => p.Nombre == productoCarrito.Nombre);
-                    if (productoCompra != null)
+                    if (productoCompra != null && productoCompra.Stock >= productoCarrito.Cantidad)
                     {
-                        productosComprados.Add(productoCompra);
+                        productoCompra.Stock -= productoCarrito.Cantidad; 
+                        Producto productoComprado = new Producto(
+                            Id: productoCompra.Id,
+                            Nombre: productoCompra.Nombre,
+                            Stock: productoCarrito.Cantidad, 
+                            Precio: productoCompra.Precio,
+                            Proveedor: productoCompra.ProveedorId
+                        );
+                        productosComprados.Add( productoComprado);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"No hay suficiente stock para el producto: {productoCarrito.Nombre}");
+                        return;
                     }
                 }
 
@@ -93,26 +132,20 @@ namespace ProyectoFinal2.Formularios
                 {
                     clienteLogueado.productosComprados = new List<Producto>();
                 }
-
                 clienteLogueado.productosComprados.AddRange(productosComprados);
 
+                gd.GuardarCliente(clientes);
+                gd.GuardarProducto(productos);
 
-                clientes = gd.CargarClientes();  
-                var clienteExistente = clientes.FirstOrDefault(c => c.correo == clienteLogueado.correo);
-                if (clienteExistente != null)
-                {
-                    clienteExistente.productosComprados = clienteLogueado.productosComprados;
-                }
-                else
-                {
-                    clientes.Add(clienteLogueado);
-                }
-
-                gd.GuardarCliente(clientes);  
                 MessageBox.Show("Compra realizada con éxito");
                 carrito.Clear();
                 ActualizarGridCarrito();
-                ExportarAExcel();
+                ActualizarGridProductos();
+
+                if (chkReporte.Checked)
+                {
+                    ExportarAExcel();
+                }
             }
             else
             {

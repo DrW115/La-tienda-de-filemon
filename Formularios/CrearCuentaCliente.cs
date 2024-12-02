@@ -63,9 +63,9 @@ namespace ProyectoFinal2.Formularios
                     return;
                 }
                 Cliente cliente = new Cliente(correo, nombre, password);
-                ClienteInterfaz clienteInterfaz = new ClienteInterfaz(correo);
                 clientes.Add(cliente);
                 gd.GuardarCliente(clientes);
+                ClienteInterfaz clienteInterfaz = new ClienteInterfaz(cliente.correo);
                 clienteInterfaz.Show();
             }
             catch (FormatException)

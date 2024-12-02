@@ -264,7 +264,7 @@ namespace ProyectoFinal2.Formularios
 
                 if (productoExistente != null)
                 {
-                    txtNuevaCant.Text = productoExistente.Id.ToString();
+                    txtNuevaCant.Text = productoExistente.Stock.ToString();
                 }
                 else
                 {

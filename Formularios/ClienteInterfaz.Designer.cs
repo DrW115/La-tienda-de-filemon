@@ -39,6 +39,7 @@
             this.btnConfirmarCompra = new System.Windows.Forms.Button();
             this.gpbCarrito = new System.Windows.Forms.GroupBox();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
+            this.chkReporte = new System.Windows.Forms.CheckBox();
             this.tbOperadorUI.SuspendLayout();
             this.tbpProductos.SuspendLayout();
             this.gpbProductos.SuspendLayout();
@@ -113,6 +114,7 @@
             // 
             // tbpCarrito
             // 
+            this.tbpCarrito.Controls.Add(this.chkReporte);
             this.tbpCarrito.Controls.Add(this.btnEliminarProducto);
             this.tbpCarrito.Controls.Add(this.btnConfirmarCompra);
             this.tbpCarrito.Controls.Add(this.gpbCarrito);
@@ -163,6 +165,16 @@
             this.dgvCarrito.Size = new System.Drawing.Size(280, 380);
             this.dgvCarrito.TabIndex = 0;
             // 
+            // chkReporte
+            // 
+            this.chkReporte.AutoSize = true;
+            this.chkReporte.Location = new System.Drawing.Point(496, 294);
+            this.chkReporte.Name = "chkReporte";
+            this.chkReporte.Size = new System.Drawing.Size(124, 20);
+            this.chkReporte.TabIndex = 4;
+            this.chkReporte.Text = "Generar reporte";
+            this.chkReporte.UseVisualStyleBackColor = true;
+            // 
             // ClienteInterfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,6 +188,7 @@
             this.gpbProductos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.tbpCarrito.ResumeLayout(false);
+            this.tbpCarrito.PerformLayout();
             this.gpbCarrito.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
             this.ResumeLayout(false);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.Button btnConfirmarCompra;
         private System.Windows.Forms.GroupBox gpbCarrito;
         private System.Windows.Forms.DataGridView dgvCarrito;
+        private System.Windows.Forms.CheckBox chkReporte;
     }
 }

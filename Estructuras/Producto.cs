@@ -35,5 +35,6 @@ namespace AutomatizaciónDeTiendas.Estructuras
     {
         public string Nombre { get; set; }
         public decimal Precio { set; get; }
+        public int Cantidad { get; set; }
     }
 }
