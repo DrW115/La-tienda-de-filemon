@@ -29,15 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfazOperador));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfazOperador));
             this.tbOperadorUI = new System.Windows.Forms.TabControl();
             this.tbpProductos = new System.Windows.Forms.TabPage();
             this.gpbProductos = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminarProducto = new System.Windows.Forms.Button();
+            this.btnActualizarProducto = new System.Windows.Forms.Button();
+            this.btnResta = new System.Windows.Forms.Button();
+            this.btnSuma = new System.Windows.Forms.Button();
+            this.txtNuevaCant = new System.Windows.Forms.TextBox();
+            this.txtNuevoPrecio = new System.Windows.Forms.TextBox();
+            this.txtNuevoNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNuevoPrecio = new System.Windows.Forms.Label();
+            this.lblNuevoNombre = new System.Windows.Forms.Label();
+            this.txtIdProductoActualizar = new System.Windows.Forms.TextBox();
+            this.lblIdComprobante = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.tbpProveedores = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnVaciarCampos = new System.Windows.Forms.Button();
             this.gpbProveedores = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -63,27 +78,16 @@
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtCorreoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.gpbProductosComprados = new System.Windows.Forms.GroupBox();
             this.chartProductosComprados = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEliminarProducto = new System.Windows.Forms.Button();
-            this.btnActualizarProducto = new System.Windows.Forms.Button();
-            this.btnResta = new System.Windows.Forms.Button();
-            this.btnSuma = new System.Windows.Forms.Button();
-            this.txtNuevaCant = new System.Windows.Forms.TextBox();
-            this.txtNuevoPrecio = new System.Windows.Forms.TextBox();
-            this.txtNuevoNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblNuevoPrecio = new System.Windows.Forms.Label();
-            this.lblNuevoNombre = new System.Windows.Forms.Label();
-            this.txtIdProductoActualizar = new System.Windows.Forms.TextBox();
-            this.lblIdComprobante = new System.Windows.Forms.Label();
             this.tbOperadorUI.SuspendLayout();
             this.tbpProductos.SuspendLayout();
             this.gpbProductos.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.tbpProveedores.SuspendLayout();
             this.gpbProveedores.SuspendLayout();
@@ -92,7 +96,6 @@
             this.tabPage1.SuspendLayout();
             this.gpbProductosComprados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductosComprados)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbOperadorUI
@@ -126,7 +129,160 @@
             this.gpbProductos.Size = new System.Drawing.Size(806, 408);
             this.gpbProductos.TabIndex = 0;
             this.gpbProductos.TabStop = false;
-            this.gpbProductos.Text = "groupBox1";
+            this.gpbProductos.Text = "Productos";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnEliminarProducto);
+            this.panel1.Controls.Add(this.btnActualizarProducto);
+            this.panel1.Controls.Add(this.btnResta);
+            this.panel1.Controls.Add(this.btnSuma);
+            this.panel1.Controls.Add(this.txtNuevaCant);
+            this.panel1.Controls.Add(this.txtNuevoPrecio);
+            this.panel1.Controls.Add(this.txtNuevoNombre);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblNuevoPrecio);
+            this.panel1.Controls.Add(this.lblNuevoNombre);
+            this.panel1.Controls.Add(this.txtIdProductoActualizar);
+            this.panel1.Controls.Add(this.lblIdComprobante);
+            this.panel1.Location = new System.Drawing.Point(455, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(351, 384);
+            this.panel1.TabIndex = 13;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(309, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(42, 35);
+            this.button2.TabIndex = 25;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnEliminarProducto
+            // 
+            this.btnEliminarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarProducto.BackgroundImage")));
+            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnEliminarProducto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEliminarProducto.Location = new System.Drawing.Point(178, 285);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarProducto.TabIndex = 24;
+            this.btnEliminarProducto.Text = "Eliminar";
+            this.btnEliminarProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizarProducto
+            // 
+            this.btnActualizarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizarProducto.BackgroundImage")));
+            this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnActualizarProducto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnActualizarProducto.Location = new System.Drawing.Point(72, 285);
+            this.btnActualizarProducto.Name = "btnActualizarProducto";
+            this.btnActualizarProducto.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizarProducto.TabIndex = 23;
+            this.btnActualizarProducto.Text = "Actualizar";
+            this.btnActualizarProducto.UseVisualStyleBackColor = true;
+            this.btnActualizarProducto.Click += new System.EventHandler(this.btnActualizarProducto_Click_2);
+            // 
+            // btnResta
+            // 
+            this.btnResta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResta.Location = new System.Drawing.Point(298, 207);
+            this.btnResta.Name = "btnResta";
+            this.btnResta.Size = new System.Drawing.Size(22, 22);
+            this.btnResta.TabIndex = 22;
+            this.btnResta.Text = "-";
+            this.btnResta.UseVisualStyleBackColor = true;
+            // 
+            // btnSuma
+            // 
+            this.btnSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuma.Location = new System.Drawing.Point(259, 207);
+            this.btnSuma.Name = "btnSuma";
+            this.btnSuma.Size = new System.Drawing.Size(22, 22);
+            this.btnSuma.TabIndex = 21;
+            this.btnSuma.Text = "+";
+            this.btnSuma.UseVisualStyleBackColor = true;
+            // 
+            // txtNuevaCant
+            // 
+            this.txtNuevaCant.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.txtNuevaCant.Location = new System.Drawing.Point(153, 204);
+            this.txtNuevaCant.Name = "txtNuevaCant";
+            this.txtNuevaCant.Size = new System.Drawing.Size(100, 22);
+            this.txtNuevaCant.TabIndex = 20;
+            // 
+            // txtNuevoPrecio
+            // 
+            this.txtNuevoPrecio.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.txtNuevoPrecio.Location = new System.Drawing.Point(153, 160);
+            this.txtNuevoPrecio.Name = "txtNuevoPrecio";
+            this.txtNuevoPrecio.Size = new System.Drawing.Size(100, 22);
+            this.txtNuevoPrecio.TabIndex = 19;
+            // 
+            // txtNuevoNombre
+            // 
+            this.txtNuevoNombre.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.txtNuevoNombre.Location = new System.Drawing.Point(153, 117);
+            this.txtNuevoNombre.Name = "txtNuevoNombre";
+            this.txtNuevoNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtNuevoNombre.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(31, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 16);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Cantidad en Stock";
+            // 
+            // lblNuevoPrecio
+            // 
+            this.lblNuevoPrecio.AutoSize = true;
+            this.lblNuevoPrecio.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNuevoPrecio.Location = new System.Drawing.Point(31, 163);
+            this.lblNuevoPrecio.Name = "lblNuevoPrecio";
+            this.lblNuevoPrecio.Size = new System.Drawing.Size(89, 16);
+            this.lblNuevoPrecio.TabIndex = 16;
+            this.lblNuevoPrecio.Text = "Nuevo Precio";
+            // 
+            // lblNuevoNombre
+            // 
+            this.lblNuevoNombre.AutoSize = true;
+            this.lblNuevoNombre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNuevoNombre.Location = new System.Drawing.Point(31, 120);
+            this.lblNuevoNombre.Name = "lblNuevoNombre";
+            this.lblNuevoNombre.Size = new System.Drawing.Size(99, 16);
+            this.lblNuevoNombre.TabIndex = 15;
+            this.lblNuevoNombre.Text = "Nuevo Nombre";
+            // 
+            // txtIdProductoActualizar
+            // 
+            this.txtIdProductoActualizar.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.txtIdProductoActualizar.Location = new System.Drawing.Point(153, 77);
+            this.txtIdProductoActualizar.Name = "txtIdProductoActualizar";
+            this.txtIdProductoActualizar.Size = new System.Drawing.Size(100, 22);
+            this.txtIdProductoActualizar.TabIndex = 14;
+            this.txtIdProductoActualizar.TextChanged += new System.EventHandler(this.txtIdProductoActualizar_TextChanged);
+            // 
+            // lblIdComprobante
+            // 
+            this.lblIdComprobante.AutoSize = true;
+            this.lblIdComprobante.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdComprobante.Location = new System.Drawing.Point(31, 80);
+            this.lblIdComprobante.Name = "lblIdComprobante";
+            this.lblIdComprobante.Size = new System.Drawing.Size(77, 16);
+            this.lblIdComprobante.TabIndex = 13;
+            this.lblIdComprobante.Text = "Producto ID";
             // 
             // dgvProductos
             // 
@@ -142,6 +298,7 @@
             // tbpProveedores
             // 
             this.tbpProveedores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbpProveedores.BackgroundImage")));
+            this.tbpProveedores.Controls.Add(this.button3);
             this.tbpProveedores.Controls.Add(this.btnVaciarCampos);
             this.tbpProveedores.Controls.Add(this.gpbProveedores);
             this.tbpProveedores.Controls.Add(this.lstProductos);
@@ -168,6 +325,18 @@
             this.tbpProveedores.TabIndex = 1;
             this.tbpProveedores.Text = "Proveedores";
             this.tbpProveedores.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(788, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(42, 35);
+            this.button3.TabIndex = 35;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnVaciarCampos
             // 
@@ -252,6 +421,7 @@
             // 
             // lstProductos
             // 
+            this.lstProductos.ForeColor = System.Drawing.SystemColors.MenuText;
             this.lstProductos.FormattingEnabled = true;
             this.lstProductos.ItemHeight = 16;
             this.lstProductos.Location = new System.Drawing.Point(324, 37);
@@ -409,6 +579,7 @@
             // 
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.txtCorreoCliente);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btnBuscar);
@@ -420,6 +591,18 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(784, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 35);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtCorreoCliente
             // 
@@ -477,140 +660,6 @@
             this.chartProductosComprados.TabIndex = 0;
             this.chartProductosComprados.Text = "chart1";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.btnEliminarProducto);
-            this.panel1.Controls.Add(this.btnActualizarProducto);
-            this.panel1.Controls.Add(this.btnResta);
-            this.panel1.Controls.Add(this.btnSuma);
-            this.panel1.Controls.Add(this.txtNuevaCant);
-            this.panel1.Controls.Add(this.txtNuevoPrecio);
-            this.panel1.Controls.Add(this.txtNuevoNombre);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblNuevoPrecio);
-            this.panel1.Controls.Add(this.lblNuevoNombre);
-            this.panel1.Controls.Add(this.txtIdProductoActualizar);
-            this.panel1.Controls.Add(this.lblIdComprobante);
-            this.panel1.Location = new System.Drawing.Point(455, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 384);
-            this.panel1.TabIndex = 13;
-            // 
-            // btnEliminarProducto
-            // 
-            this.btnEliminarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarProducto.BackgroundImage")));
-            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.btnEliminarProducto.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(178, 285);
-            this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarProducto.TabIndex = 24;
-            this.btnEliminarProducto.Text = "Eliminar";
-            this.btnEliminarProducto.UseVisualStyleBackColor = true;
-            // 
-            // btnActualizarProducto
-            // 
-            this.btnActualizarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizarProducto.BackgroundImage")));
-            this.btnActualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.btnActualizarProducto.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnActualizarProducto.Location = new System.Drawing.Point(72, 285);
-            this.btnActualizarProducto.Name = "btnActualizarProducto";
-            this.btnActualizarProducto.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizarProducto.TabIndex = 23;
-            this.btnActualizarProducto.Text = "Actualizar";
-            this.btnActualizarProducto.UseVisualStyleBackColor = true;
-            // 
-            // btnResta
-            // 
-            this.btnResta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResta.Location = new System.Drawing.Point(298, 207);
-            this.btnResta.Name = "btnResta";
-            this.btnResta.Size = new System.Drawing.Size(22, 22);
-            this.btnResta.TabIndex = 22;
-            this.btnResta.Text = "-";
-            this.btnResta.UseVisualStyleBackColor = true;
-            // 
-            // btnSuma
-            // 
-            this.btnSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuma.Location = new System.Drawing.Point(259, 207);
-            this.btnSuma.Name = "btnSuma";
-            this.btnSuma.Size = new System.Drawing.Size(22, 22);
-            this.btnSuma.TabIndex = 21;
-            this.btnSuma.Text = "+";
-            this.btnSuma.UseVisualStyleBackColor = true;
-            // 
-            // txtNuevaCant
-            // 
-            this.txtNuevaCant.Location = new System.Drawing.Point(153, 204);
-            this.txtNuevaCant.Name = "txtNuevaCant";
-            this.txtNuevaCant.Size = new System.Drawing.Size(100, 22);
-            this.txtNuevaCant.TabIndex = 20;
-            // 
-            // txtNuevoPrecio
-            // 
-            this.txtNuevoPrecio.Location = new System.Drawing.Point(153, 160);
-            this.txtNuevoPrecio.Name = "txtNuevoPrecio";
-            this.txtNuevoPrecio.Size = new System.Drawing.Size(100, 22);
-            this.txtNuevoPrecio.TabIndex = 19;
-            // 
-            // txtNuevoNombre
-            // 
-            this.txtNuevoNombre.Location = new System.Drawing.Point(153, 117);
-            this.txtNuevoNombre.Name = "txtNuevoNombre";
-            this.txtNuevoNombre.Size = new System.Drawing.Size(100, 22);
-            this.txtNuevoNombre.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(31, 207);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 16);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Cantidad en Stock";
-            // 
-            // lblNuevoPrecio
-            // 
-            this.lblNuevoPrecio.AutoSize = true;
-            this.lblNuevoPrecio.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNuevoPrecio.Location = new System.Drawing.Point(31, 163);
-            this.lblNuevoPrecio.Name = "lblNuevoPrecio";
-            this.lblNuevoPrecio.Size = new System.Drawing.Size(89, 16);
-            this.lblNuevoPrecio.TabIndex = 16;
-            this.lblNuevoPrecio.Text = "Nuevo Precio";
-            // 
-            // lblNuevoNombre
-            // 
-            this.lblNuevoNombre.AutoSize = true;
-            this.lblNuevoNombre.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNuevoNombre.Location = new System.Drawing.Point(31, 120);
-            this.lblNuevoNombre.Name = "lblNuevoNombre";
-            this.lblNuevoNombre.Size = new System.Drawing.Size(99, 16);
-            this.lblNuevoNombre.TabIndex = 15;
-            this.lblNuevoNombre.Text = "Nuevo Nombre";
-            // 
-            // txtIdProductoActualizar
-            // 
-            this.txtIdProductoActualizar.Location = new System.Drawing.Point(153, 77);
-            this.txtIdProductoActualizar.Name = "txtIdProductoActualizar";
-            this.txtIdProductoActualizar.Size = new System.Drawing.Size(100, 22);
-            this.txtIdProductoActualizar.TabIndex = 14;
-            // 
-            // lblIdComprobante
-            // 
-            this.lblIdComprobante.AutoSize = true;
-            this.lblIdComprobante.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblIdComprobante.Location = new System.Drawing.Point(31, 80);
-            this.lblIdComprobante.Name = "lblIdComprobante";
-            this.lblIdComprobante.Size = new System.Drawing.Size(77, 16);
-            this.lblIdComprobante.TabIndex = 13;
-            this.lblIdComprobante.Text = "Producto ID";
-            // 
             // InterfazOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -624,6 +673,8 @@
             this.tbOperadorUI.ResumeLayout(false);
             this.tbpProductos.ResumeLayout(false);
             this.gpbProductos.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.tbpProveedores.ResumeLayout(false);
             this.tbpProveedores.PerformLayout();
@@ -634,8 +685,6 @@
             this.tabPage1.PerformLayout();
             this.gpbProductosComprados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartProductosComprados)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -690,5 +739,8 @@
         private System.Windows.Forms.TextBox txtIdProductoActualizar;
         private System.Windows.Forms.Label lblIdComprobante;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

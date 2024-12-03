@@ -23,12 +23,14 @@ namespace ProyectoFinal2
         {
             ClienteLogin clienteLogin = new ClienteLogin();
             clienteLogin.Show();
+            this.Hide();
         }
 
         private void btnOperador_Click(object sender, EventArgs e)
         {
             OperadorLogin operadorLogin = new OperadorLogin();
             operadorLogin.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

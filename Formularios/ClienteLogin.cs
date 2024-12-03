@@ -31,6 +31,7 @@ namespace ProyectoFinal2.Formularios
             {
                 ClienteInterfaz clienteInterfaz = new ClienteInterfaz(clienteExistente.correo);
                 clienteInterfaz.Show();
+                this.Close();
 
             }
         }
@@ -39,6 +40,7 @@ namespace ProyectoFinal2.Formularios
         {
             CrearCuentaCliente crearCuentaCliente = new CrearCuentaCliente();
             crearCuentaCliente.Show();
+            this.Close();
         }
     }
 }

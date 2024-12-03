@@ -30,5 +30,10 @@ namespace ProyectoFinal2.Formularios
                 this.Close();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

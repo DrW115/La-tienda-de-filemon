@@ -424,7 +424,7 @@ namespace ProyectoFinal2.Formularios
                 .Select(g => new
                 {
                     NombreProducto = g.Key,
-                    Cantidad = g.Count()
+                    Cantidad = g.Sum(p => p.Stock)
                 })
                 .ToList();
 
@@ -460,6 +460,26 @@ namespace ProyectoFinal2.Formularios
                     gd.GuardarProducto(productos);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           Application.Exit();
+        }
+
+        private void btnActualizarProducto_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
