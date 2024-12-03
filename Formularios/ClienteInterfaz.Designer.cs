@@ -76,7 +76,10 @@
             // 
             // btnComprar
             // 
+            this.btnComprar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComprar.BackgroundImage")));
+            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnComprar.Location = new System.Drawing.Point(501, 217);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(147, 43);
@@ -86,7 +89,10 @@
             // 
             // btnAgregarCarrito
             // 
+            this.btnAgregarCarrito.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarCarrito.BackgroundImage")));
+            this.btnAgregarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCarrito.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAgregarCarrito.Location = new System.Drawing.Point(501, 140);
             this.btnAgregarCarrito.Name = "btnAgregarCarrito";
             this.btnAgregarCarrito.Size = new System.Drawing.Size(147, 44);
@@ -143,7 +149,10 @@
             // 
             // btnEliminarProducto
             // 
+            this.btnEliminarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminarProducto.BackgroundImage")));
+            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarProducto.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnEliminarProducto.Location = new System.Drawing.Point(342, 235);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(157, 60);
@@ -154,7 +163,10 @@
             // 
             // btnConfirmarCompra
             // 
+            this.btnConfirmarCompra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirmarCompra.BackgroundImage")));
+            this.btnConfirmarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmarCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarCompra.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnConfirmarCompra.Location = new System.Drawing.Point(342, 95);
             this.btnConfirmarCompra.Name = "btnConfirmarCompra";
             this.btnConfirmarCompra.Size = new System.Drawing.Size(157, 63);
